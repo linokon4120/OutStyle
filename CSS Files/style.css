@@ -29,8 +29,15 @@ body {
 
 }
 
-/* Select and style elements by class name or ID */
-
+@media (max-width: 768px) {
+  .header-container {
+      flex-direction: column; /* Stack items on smaller screens */
+      height: auto; /* Allow height to adjust */
+  }
+  h1 {
+      font-size: 50px; /* Smaller heading size */
+  }
+}
 
 /* Example: This styles elements with class="header"*/
 .header-container {
@@ -148,7 +155,7 @@ button:hover {
 }
 
 button:active {
-  
+  transform: scale(0.95); /* Adds a subtle effect */
 }
 /*
   Style Lists: Styles added to the ol or ul style rulesets affect the entire
@@ -337,6 +344,9 @@ button {
   background-color: #ECF8EC;
   color: black;
 }
+.dark-mode h1, .dark-mode p, .dark-mode a {
+  transition: color 0.5s ease;
+}
 
 
 /* Validating error formatting */
@@ -375,6 +385,8 @@ button {
   flex-direction: column; /* these flexbox rules center the content on the screen */
   align-items: center;
   justify-content: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
 }
 
 /* box that contains all the content and images */
