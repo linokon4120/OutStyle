@@ -1,18 +1,37 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nutrition Calculator</title>
-    <link rel="stylesheet" href="CSS Files/style.css">
+    <link href="CSS Files/nutrition.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-    <div class="nutrition-container">
-        <h1>Nutrition Calculator</h1>
-        <input type="text" id="foodInput" placeholder="Enter food items, e.g., apple, banana">
-        <button onclick="fetchNutrition()">Get Nutrition Info</button>
-        <div id="nutritionResults"></div>
+
+<div class="nutrition-container">
+    <h2>Nutrition Calculator</h2>
+    <p>Welcome! To find nutrition information, please enter food items in the box below, one item per line. For example:</p>
+    <ul>
+        <li>1 cup of rice</li>
+        <li>200 grams of chicken breast</li>
+        <li>2 apples</li>
+    </ul>
+    <p>Click the "Calculate" button to see the detailed nutritional breakdown for each item you entered!</p>
+
+    <!-- Input area for food items -->
+    <textarea id="food-input" placeholder="Enter food items here..."></textarea>
+    <button id="calculate-button">Calculate</button>
+
+    <!-- Area to display results -->
+    <div id="results-container">
+        <h3>Nutrition Information:</h3>
+        <div id="results"></div>
     </div>
-    <script src="nutrition.js"></script>
+</div>
+
+<script src="nutrition.js"></script>
+
 </body>
 </html>
